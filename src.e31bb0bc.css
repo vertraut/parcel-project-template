@@ -137,6 +137,7 @@ img {
   max-width: 480px;
   margin-right: auto;
   margin-left: auto;
+  background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2ddpx) {
   .section.price {
