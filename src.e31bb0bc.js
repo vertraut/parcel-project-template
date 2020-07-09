@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\fonts\\Raleway-Bold.ttf":[["Raleway-Bold.936981fd.ttf","fonts/Raleway-Bold.ttf"],"fonts/Raleway-Bold.ttf"],"./..\\images\\price-section\\bg-price-mobile.png":[["bg-price-mobile.86d146bf.png","images/price-section/bg-price-mobile.png"],"images/price-section/bg-price-mobile.png"],"./..\\images\\price-section\\bg-price-tablet.png":[["bg-price-tablet.8e9ab6c8.png","images/price-section/bg-price-tablet.png"],"images/price-section/bg-price-tablet.png"],"./..\\images\\price-section\\bg-price-desktop.png":[["bg-price-desktop.bcf5abd0.png","images/price-section/bg-price-desktop.png"],"images/price-section/bg-price-desktop.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53111" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
