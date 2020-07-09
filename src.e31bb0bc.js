@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Raleway-Bold.ttf":[["Raleway-Bold.936981fd.ttf","fonts/Raleway-Bold.ttf"],"fonts/Raleway-Bold.ttf"],"./..\\images\\price-section\\bg-price-mobile.png":[["bg-price-mobile.86d146bf.png","images/price-section/bg-price-mobile.png"],"images/price-section/bg-price-mobile.png"],"./..\\images\\price-section\\bg-price-tablet.png":[["bg-price-tablet.8e9ab6c8.png","images/price-section/bg-price-tablet.png"],"images/price-section/bg-price-tablet.png"],"./..\\images\\price-section\\bg-price-desktop.png":[["bg-price-desktop.bcf5abd0.png","images/price-section/bg-price-desktop.png"],"images/price-section/bg-price-desktop.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\fonts\\Raleway-Bold.ttf":[["Raleway-Bold.936981fd.ttf","fonts/Raleway-Bold.ttf"],"fonts/Raleway-Bold.ttf"],"./..\\images\\price-section\\bg-price-mobile.png":[["bg-price-mobile.86d146bf.png","images/price-section/bg-price-mobile.png"],"images/price-section/bg-price-mobile.png"],"./..\\images\\price-section\\bg-price-mobile@2x.png":[["bg-price-mobile@2x.22246945.png","images/price-section/bg-price-mobile@2x.png"],"images/price-section/bg-price-mobile@2x.png"],"./..\\images\\price-section\\bg-price-mobile@3x.png":[["bg-price-mobile@3x.a2f03e44.png","images/price-section/bg-price-mobile@3x.png"],"images/price-section/bg-price-mobile@3x.png"],"./..\\images\\price-section\\bg-price-tablet.png":[["bg-price-tablet.8e9ab6c8.png","images/price-section/bg-price-tablet.png"],"images/price-section/bg-price-tablet.png"],"./..\\images\\price-section\\bg-price-tablet@2x.png":[["bg-price-tablet@2x.cc0f074c.png","images/price-section/bg-price-tablet@2x.png"],"images/price-section/bg-price-tablet@2x.png"],"./..\\images\\price-section\\bg-price-tablet@3x.png":[["bg-price-tablet@3x.687c696c.png","images/price-section/bg-price-tablet@3x.png"],"images/price-section/bg-price-tablet@3x.png"],"./..\\images\\price-section\\bg-price-desktop.png":[["bg-price-desktop.bcf5abd0.png","images/price-section/bg-price-desktop.png"],"images/price-section/bg-price-desktop.png"],"./..\\images\\price-section\\bg-price-desktop@2x.png":[["bg-price-desktop@2x.a2460e6f.png","images/price-section/bg-price-desktop@2x.png"],"images/price-section/bg-price-desktop@2x.png"],"./..\\images\\price-section\\bg-price-desktop@3x.png":[["bg-price-desktop@3x.e9af51ae.png","images/price-section/bg-price-desktop@3x.png"],"images/price-section/bg-price-desktop@3x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53111" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63391" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

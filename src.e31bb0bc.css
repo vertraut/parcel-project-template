@@ -20,7 +20,7 @@
   border-radius: 2px;
 }
 
-.price-list {
+.gallery-list, .price-list {
   /* убирем точки в списках, где это необходимо */
   list-style: none;
   margin: 0;
@@ -138,16 +138,46 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2ddpx) {
+  .section.price {
+    background-image: url(/bg-price-mobile@2x.22246945.png);
+  }
+}
+@media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3ddpx) {
+  .section.price {
+    background-image: url(/bg-price-mobile@3x.a2f03e44.png);
+  }
+}
 @media screen and (min-width: 768px) and (min-width: 767px) {
   .section.price {
     max-width: 768px;
     background-image: url(/bg-price-tablet.8e9ab6c8.png);
   }
 }
+@media screen and (min-width: 768px) and (min-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-width: 767px) and (min-resolution: 2ddpx) {
+  .section.price {
+    background-image: url(/bg-price-tablet@2x.cc0f074c.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 767px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-width: 767px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-width: 767px) and (min-resolution: 3ddpx) {
+  .section.price {
+    background-image: url(/bg-price-tablet@3x.687c696c.png);
+  }
+}
 @media screen and (min-width: 1280px) {
   .section.price {
     max-width: 1280px;
     background-image: url(/bg-price-desktop.bcf5abd0.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2ddpx) {
+  .section.price {
+    background-image: url(/bg-price-desktop@2x.a2460e6f.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 3), screen and (min-width: 1280px) and (min-resolution: 288dpi), screen and (min-width: 1280px) and (min-resolution: 3ddpx) {
+  .section.price {
+    background-image: url(/bg-price-desktop@3x.e9af51ae.png);
   }
 }
 
@@ -219,7 +249,7 @@ img {
 @media screen and (min-width: 768px) {
   .price-list {
     font-size: 18px;
-    line-height: 1.667npm run deploy;
+    line-height: 1.667;
   }
 }
 @media screen and (max-width: 1279px) {
@@ -272,6 +302,94 @@ img {
 .service-price {
   margin: 0;
   padding: 0;
+}
+
+.gallery-slogan {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 44px;
+  padding-left: 80px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.91;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+}
+.gallery-slogan::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  left: 0px;
+  top: 10px;
+  background: #303030;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: -15px;
+}
+
+.gallery-list-item {
+  margin: 15px;
+}
+@media screen and (min-width: 768px) {
+  .gallery-list-item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery-list-item {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-image-thumb {
+    width: 330px;
+    height: 360px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery-image-thumb {
+    width: 270px;
+  }
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+@media screen and (min-width: 768px) {
+  .gallery-image {
+    object-position: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery-image {
+    object-position: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-list-item:nth-child(1) .gallery-image {
+    object-position: -16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery-list-item:nth-child(1) .gallery-image {
+    object-position: -50px;
+  }
+}
+
+.gallery-list-item:nth-child(3) .gallery-image {
+  object-position: center;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
