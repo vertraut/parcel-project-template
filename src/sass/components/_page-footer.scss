@@ -1,0 +1,67 @@
+.footer {
+  background-color: $grey-bg-color;
+  color: $secondary-text-color;
+}
+.contact-form {
+  background-color: $dark-bg-color;
+  color: $light-color;
+}
+.work-time-header:before {
+  content: '';
+  margin-right: 20px;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: $secondary-text-color;
+}
+.form-header {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.social-insta:before {
+  content: '';
+  margin-right: 20px;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: $dark-link-color;
+}
+.contacts-header {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.work-time-header {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.work-time {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: 0.02em;
+}
+.contacts-link {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: $secondary-text-color;
+}
