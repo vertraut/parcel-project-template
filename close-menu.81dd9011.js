@@ -117,83 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Raleway-Bold.ttf":[["Raleway-Bold.936981fd.ttf","fonts/Raleway-Bold.ttf"],"fonts/Raleway-Bold.ttf"],"./..\\images\\price-section\\bg-price-mobile.jpg":[["bg-price-mobile.7926c863.jpg","images/price-section/bg-price-mobile.jpg"],"images/price-section/bg-price-mobile.jpg"],"./..\\images\\price-section\\bg-price-mobile@2x.jpg":[["bg-price-mobile@2x.208f3f35.jpg","images/price-section/bg-price-mobile@2x.jpg"],"images/price-section/bg-price-mobile@2x.jpg"],"./..\\images\\price-section\\bg-price-mobile@3x.jpg":[["bg-price-mobile@3x.2b9b15c0.jpg","images/price-section/bg-price-mobile@3x.jpg"],"images/price-section/bg-price-mobile@3x.jpg"],"./..\\images\\price-section\\bg-price-tablet.jpg":[["bg-price-tablet.0592bf69.jpg","images/price-section/bg-price-tablet.jpg"],"images/price-section/bg-price-tablet.jpg"],"./..\\images\\price-section\\bg-price-tablet@2x.jpg":[["bg-price-tablet@2x.c6ce3d43.jpg","images/price-section/bg-price-tablet@2x.jpg"],"images/price-section/bg-price-tablet@2x.jpg"],"./..\\images\\price-section\\bg-price-tablet@3x.jpg":[["bg-price-tablet@3x.586f8e58.jpg","images/price-section/bg-price-tablet@3x.jpg"],"images/price-section/bg-price-tablet@3x.jpg"],"./..\\images\\price-section\\bg-price-desktop.jpg":[["bg-price-desktop.edfc058f.jpg","images/price-section/bg-price-desktop.jpg"],"images/price-section/bg-price-desktop.jpg"],"./..\\images\\price-section\\bg-price-desktop@2x.jpg":[["bg-price-desktop@2x.5434657c.jpg","images/price-section/bg-price-desktop@2x.jpg"],"images/price-section/bg-price-desktop@2x.jpg"],"./..\\images\\price-section\\bg-price-desktop@3x.jpg":[["bg-price-desktop@3x.95cca37b.jpg","images/price-section/bg-price-desktop@3x.jpg"],"images/price-section/bg-price-desktop@3x.jpg"],"./..\\images\\header\\img3\\img3-480.jpg":[["img3-480.7d61526c.jpg","images/header/img3/img3-480.jpg"],"images/header/img3/img3-480.jpg"],"./..\\images\\header\\img3\\img3-609.jpg":[["img3-609.f39ee072.jpg","images/header/img3/img3-609.jpg"],"images/header/img3/img3-609.jpg"],"./..\\images\\header\\img3\\img3-1125.jpg":[["img3-1125.705161f7.jpg","images/header/img3/img3-1125.jpg"],"images/header/img3/img3-1125.jpg"],"./..\\images\\contacts\\mobile.jpg":[["mobile.e6c1285a.jpg","images/contacts/mobile.jpg"],"images/contacts/mobile.jpg"],"./..\\images\\contacts\\mobile@2x.jpg":[["mobile@2x.717efd09.jpg","images/contacts/mobile@2x.jpg"],"images/contacts/mobile@2x.jpg"],"./..\\images\\contacts\\tablet.jpg":[["tablet.c4509875.jpg","images/contacts/tablet.jpg"],"images/contacts/tablet.jpg"],"./..\\images\\contacts\\tablet@2x.jpg":[["tablet@2x.c82497ee.jpg","images/contacts/tablet@2x.jpg"],"images/contacts/tablet@2x.jpg"],"./..\\images\\contacts\\desktop.jpg":[["desktop.150277d7.jpg","images/contacts/desktop.jpg"],"images/contacts/desktop.jpg"],"./..\\images\\contacts\\desktop@2x.jpg":[["desktop@2x.8b1c77c7.jpg","images/contacts/desktop@2x.jpg"],"images/contacts/desktop@2x.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"close-menu.js":[function(require,module,exports) {
+$('.mobileMenuHeading').on('click', function () {
+  $(this).next('.sectionMenu').slideToggle('fast', function () {
+    $(this).prev().html($(this).is(':visible') ? 'Скрыть' : 'Меню');
+  });
+});
+$('.sectionMenu a').click(function (e) {
+  $('.mobileMenuHeading').click();
+});
+$('.mobileMenuHeading').click();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52952" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52041" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -397,5 +331,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","close-menu.js"], null)
+//# sourceMappingURL=/close-menu.81dd9011.js.map
