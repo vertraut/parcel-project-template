@@ -127,6 +127,7 @@ img {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  transition: background-color linear 250ms;
 }
 .record_button:hover, .record_button:focus {
   background-color: #ff6c00;
