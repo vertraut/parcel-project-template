@@ -111,6 +111,9 @@ img {
 }
 
 .record_button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
   min-width: 160px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -118,13 +121,12 @@ img {
   border-radius: 25px;
   background: none;
   color: #ffffff;
+  cursor: pointer;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  outline: none;
-  margin-left: auto;
 }
 .record_button:hover, .record_button:focus {
   background-color: #ff6c00;
