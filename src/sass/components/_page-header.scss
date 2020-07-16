@@ -504,3 +504,57 @@
     }
   }
 }
+.slider-nav {
+  display: none;
+  @media screen and (min-width: $min-tablet) {
+    display: block;
+  }
+}
+.text-nav {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.back-link {
+  color: rgba(157, 164, 189, 0.6);
+  margin-right: 26px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+    margin-top: 8px;
+  }
+}
+.forward-link {
+  color: $light-color;
+  text-align: right;
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+    margin-top: 8px;
+  }
+}
+
+.slider-nav .text-nav {
+  display: flex;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+}
+
+.bullets-nav {
+  position: absolute;
+  top: 325px;
+  right: 40px;
+}
