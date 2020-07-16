@@ -19,6 +19,8 @@
   text-transform: uppercase;
   // outline: none;
 
+  transition: background-color linear 250ms;
+
   &:hover,
   &:focus {
     background-color: $accent-color;
